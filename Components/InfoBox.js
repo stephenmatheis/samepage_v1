@@ -12,11 +12,7 @@ export default function Component_InfoBox(param) {
         total
     } = param;
 
-    const id = `${param.id}-info-box`;
-
     const component = Component({
-        id: id,
-        type: 'info-box',
         html: /*html*/ `
             <div id=${id} class='info-box'>
                 <div>

@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_FormButton(param) {
-    const id = `${param.id}-${param.type}-form-button`;
-
     return Component({
-        id: id,
-        type: `${param.type}button`,
         html: /*html*/ `
             <div id=${id} class="form-button ${param.type}-button">${param.value}</div>
         `,

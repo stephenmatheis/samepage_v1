@@ -5,7 +5,6 @@ import Component from '../Actions/Component.js'
 
 export default function Component_HoverForm(param) {
     const {
-        id,
         parent,
         position,
         top,
@@ -13,11 +12,7 @@ export default function Component_HoverForm(param) {
         data
     } = param;
 
-    const componentId = `${id}-hover-form`;
-
     return Component({
-        id: componentId,
-        type: 'hover-form',
         html: /*html*/ `
             <div id=${componentId} class="hover-form" style="top: ${top}px; left: ${left}px;">
                 ${data.Title}

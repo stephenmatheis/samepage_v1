@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_NewForm(param) {
-    const id = `${param.id}-new-form`;
-
     return Component({
-        id: id,
-        type: 'newform',
         html: /*html*/ `
             <div id=${id} data-list=${param.list}>
                 ${createFormHTML()}

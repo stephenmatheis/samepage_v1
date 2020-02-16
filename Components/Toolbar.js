@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Toolbar(param) {
-    const id = `${param.id}-table-toolbar`;
-
     return Component({
-        id: id,
-        type: 'table-toolbar',
         html: /*html*/ `
             <div id=${id} class='table-toolbar'>
             

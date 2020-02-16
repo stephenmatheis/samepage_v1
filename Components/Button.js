@@ -18,8 +18,6 @@ export default function Component_Button(param) {
     const componentId = `${id}-button`;
 
     const component = Component({
-        id: componentId,
-        type: 'newbutton',
         html: /*html*/ `
             <span id=${componentId} class='button ${color || ''} ${disabled ? 'disabled' : ''}' >
                 ${icon}

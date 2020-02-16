@@ -5,8 +5,6 @@ import Component from '../Actions/Component.js'
 
 export default function Component_Notification(param) {
     return Component({
-        id: 'app-notification',
-        type: 'notification',
         html: /*html*/ `
             <div id='app-notification' class='notification'>
                 ${param.text}

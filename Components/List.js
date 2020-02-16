@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_List(param) {
-    const id = `${param.id}-list`;
-
     return Component({
-        id: id,
-        type: 'list',
         html: /*html*/ `
             <div id=${id} class='list'>
                 ${createListHTML()}

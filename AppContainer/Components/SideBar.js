@@ -10,26 +10,11 @@ export default function Component_SideBar(param) {
     } = param;
 
     return Component({
-        id: id,
-        type: 'sidebar',
         html: /*html*/ `
             <div id=${id} class="sidebar">
                 <div class="nav-container">
                     <span class="sidebar-route ${(route === "") ? "sidebar-selected" : ""} home" id="Home">
                         <svg class="icon"><use href="#icon-home"></use></svg>
-                    </span>
-                    ${createNavByRole()}
-                    <!-- Everyone can see their team. Ready only by default, set in Views/Personnel.js -->
-                    <span class="nav ${(route === "Personnel") ? "nav-selected" : ""}" id="Personnel">
-                        <svg class="icon"><use href="#icon-users"></use></svg>
-                    </span>
-                    <!-- Everyone can see Tasks. Ready only by default, set in Views/Tasks.js -->
-                    <span class="nav ${(route === "Tasks") ? "nav-selected" : ""}" id="Tasks">
-                        <svg class="icon"><use href="#icon-clipboard"></use></svg>
-                    </span>
-                    <!-- Everyone can see Reports -->
-                    <span class="nav ${(route === "Reports") ? "nav-selected" : ""}" id="Reports">
-                        <svg class="icon"><use href="#icon-stats-bars"></use></svg>
                     </span>
                 </div>
                 <div class="settings-container">
@@ -39,7 +24,6 @@ export default function Component_SideBar(param) {
                 </div>
             </div>
         `,
-        canRemoveStyle: 'no',
         style: /*css*/ `
             .sidebar {
                 display: flex;
@@ -126,25 +110,6 @@ export default function Component_SideBar(param) {
             }
         ]
     });
-
-    function createNavByRole() {
-        const roles = app.user.roles.map(role => role.Title);
-        let html = '';
-
-        if (roles.includes('Personnel')) {
-            html += /*html*/ `
-                <span class="nav ${(route === "Record") ? "nav-selected" : ""}" id="Record">
-                    <svg class="icon"><use href="#icon-user"></use></svg>
-                </span>
-            `;
-        }
-
-            html += /*html*/ `
-                
-            `;
-
-        return html;
-    }
 
     function routeToView() {
         removeSelectNav();

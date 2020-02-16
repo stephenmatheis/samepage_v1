@@ -25,7 +25,7 @@ export default function Component(param) {
             app.store.remove(component);
         },
         empty() {
-            const children = document.querySelector(`#${id}`).querySelectorAll('*');
+            const children = document.querySelector(`#${component.id}`).querySelectorAll('*');
             
             [...children]
                 .filter(child => app.store.get(child))
@@ -33,23 +33,15 @@ export default function Component(param) {
                 .forEach(component => component.remove());
         },
         add() {
-            checkStyle();
-            insertHTML();
-        }
-    }
-
-    function checkStyle() {
-        const findStyle = document.querySelector(`style[data-type="${type}"]`);
-
-        if (!findStyle) {
             addStyle();
+            insertHTML();
         }
     }
 
     function addStyle() {
         const head = document.querySelector('head');
         const html = `
-            <style type="text/css" data-component="${id}">
+            <style type="text/css" data-component="${component.id}">
                 ${style}
             </style>
         `;
@@ -58,12 +50,12 @@ export default function Component(param) {
     }
 
     function insertHTML() {
-            if (adjacentElement) {
-                adjacentElement.insertAdjacentHTML(position, html);
-            }
+        if (adjacentElement) {
+            adjacentElement.insertAdjacentHTML(position, html);
 
             register();
             addEventListeners(events);
+        }
     }
 
     function register() {

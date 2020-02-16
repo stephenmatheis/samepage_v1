@@ -4,16 +4,11 @@ import Component from '../Actions/Component.js'
 
 export default function Component_Heading(param) {
     const {
-        id,
         parent,
         text,
     } = param;
 
-    const componentId = `${id}-message`;
-
     return Component({
-        id: componentId,
-        type: 'message',
         html: /*html*/ `
             <div id=${componentId} class='message'>
                 <div>${text}</div>

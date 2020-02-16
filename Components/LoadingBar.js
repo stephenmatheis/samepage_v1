@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_LoadingBar(param) {
-    const id = `${param.id}-loading-bar`;
-
     const loadingBar = Component({
-        id,
-        type: 'loadingbar',
         html: /*html*/ `
             <div id=${id} class='loading-bar'>
                 <!-- <div class='hello-message'>

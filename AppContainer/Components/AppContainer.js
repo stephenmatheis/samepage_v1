@@ -4,8 +4,6 @@ import Component from '../../Actions/Component.js'
 
 export default function Component_AppContainer(param) {
     return Component({
-        id: param.id,
-        type: 'appcontainer',
         html: /*html*/ `
             <div id=${param.id}></div>
         `,

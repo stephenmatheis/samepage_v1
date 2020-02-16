@@ -3,11 +3,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Form(param) {
-    const id = `${param.id}-form`;
-
     return Component({
-        id: id,
-        type: 'form',
         html: /*html*/ `
             <div id=${id} class='form'></div>
         `,

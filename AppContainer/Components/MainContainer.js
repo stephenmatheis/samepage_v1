@@ -4,8 +4,6 @@ import Component from '../../Actions/Component.js'
 
 export default function Component_MainContainer(param) {
     return Component({
-        id: param.id,
-        type: 'maincontainer',
         html: /*html*/ `
             <div id=${param.id}>
                 

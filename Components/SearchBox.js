@@ -5,17 +5,12 @@ import Component from '../Actions/Component.js'
 
 export default function Component_SearchBox(param) {
     const {
-        id,
         parent,
         position,
         action
     } = param;
 
-    const componentId = `${id}-search-box`;
-
     return Component({
-        id: componentId,
-        type: 'search-box',
         html: /*html*/ `
             <div id=${id} class='search-box'>
                 <svg class="icon">

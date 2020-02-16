@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_ItemForm(param) {
-    const id = `${param.id}-item-form`;
-
     return Component({
-        id: id,
-        type: 'itemform',
         html: /*html*/ `
             <div id=${id} data-list=${param.list} data-itemid=${param.item.Id}>
                 ${createFormHTML()}

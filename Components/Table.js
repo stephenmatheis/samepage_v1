@@ -18,14 +18,10 @@ export default function Component_Table(param) {
         tables
     } = param;
     
-    const id = `${param.id}-table`;
-
     let viewTables = tables;
     let hoverForm;
 
     const component = Component({
-        id: id,
-        type: 'table',
         html: /*html*/ `
             <div id=${id} class="table-container">
                 <table class="table">

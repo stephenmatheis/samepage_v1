@@ -5,18 +5,11 @@ import Component from '../Actions/Component.js'
 
 export default function Component_SelectAll(param) {
     const {
-        id,
-        root,
-        parent,
         position,
         tables
     } = param;
 
-    const componentId = `${id}-select-all`;
-
     const component = Component({
-        id: componentId,
-        type: 'select-all',
         html: /*html*/ `
             <div class="select-all-container">
                 <label class="select-all">

@@ -4,11 +4,7 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Card(param) {
-    const id = `${param.id}-card`;
-
     return Component({
-        id: id,
-        type: 'card',
         html: /*html*/ `
             <div id=${id} class='card'>
                 <!-- <div class='card-title'>

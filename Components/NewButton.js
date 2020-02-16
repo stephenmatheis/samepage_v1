@@ -5,11 +5,7 @@ import Component from '../Actions/Component.js'
 import Router from '../Actions/Router.js'
 
 export default function Component_NewButton(param) {
-    const id = `${param.id}-new-button`;
-
     return Component({
-        id: id,
-        type: 'newbutton',
         html: /*html*/ `
             <span id=${id} class='new-button' >
                 <!-- &plus; Add new ${param.newLabel} -->
