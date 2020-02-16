@@ -19,13 +19,14 @@ async function main() {
     // Define app Namespace. Could make this it's own module.
     window.app = {
         data: data,
+        name: 'new',
         defaultColor: 'darkslategray;',
         primaryColor: 'mediumpurple',
         secondaryColor: 'whitesmoke',
         highlightColor: '#f6b73c',
         store: Store(),
         setComponentId() {
-            return componentId++;
+            return `${app.getName()}-${componentId++}`;
         }
     };
 

@@ -12,7 +12,6 @@ export default function Component(param) {
 
     const component = {
         id,
-        container,
         html,
         style,
         adjacentElement,
