@@ -1,40 +1,49 @@
 /** (C) Stephen Matheis 2019 */
 
 export default function Store() {
-    let store = {
-        appContainer,
-        mainContainer,
-        components: [],
-        events: []
-    }
+    let appContainer;
+    let  mainContainer;
+    let components = [];
+    let events = [];
 
     return {
         setAppContainer(component) {
-            store.appContainer = component;
+            appContainer = component;
         },
         getAppContainer() {
-            return store.appContainer;
+            return appContainer;
         },
         setMainContainer(component) {
-            store.mainContainer = component;
+            mainContainer = component;
         },
         getMainContainer() {
-            return store.mainContainer;
+            return mainContainer;
         },
-        get(component) {
-            return store.components.find(component);
+        addComponent(component) {
+            components.push(component);
         },
-        add(component) {
-            store.components.push(component);
+        getComponent(component) {
+            return components.find(component);
         },
-        remove(component) {
-            const index = store.components.indexOf(component);
+        removeComponent(component) {
+            const index = components.indexOf(component);
     
-            store.components.splice(index, 1);
+            components.splice(index, 1);
+        },
+        addEvent(event) {
+            events.push(event);
+        },
+        getEvent(event) {
+            return events.find(event);
+        },
+        removeEvent(event) {
+            const index = events.indexOf(event);
+    
+            events.splice(index, 1);
         },
         empty() {
-            store.components = [];
-            store.events = [];
+            components = [];
+            events = [];
         }
     }
 }
