@@ -3,16 +3,16 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_InfoBox(options) {
+export default function Component_InfoBox(param) {
     const {
         page,
         pages,
         start,
         end,
         total
-    } = options;
+    } = param;
 
-    const id = `${options.id}-info-box`;
+    const id = `${param.id}-info-box`;
 
     const component = Component({
         id: id,
@@ -62,19 +62,19 @@ export default function Component_InfoBox(options) {
                 font-weight: 500;
             }
         `,
-        adjacentElement: options.parent,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent,
+        position: param.position || 'beforeend',
         events: [
             
         ]
     });
 
-    component.update = (options) => {
+    component.update = (param) => {
         const {
             page,
             start,
             end,
-        } = options;
+        } = param;
         
         const pageCount = document.querySelector(`#${id} .page-count`);
         const itemStart = document.querySelector(`#${id} .item-start`);

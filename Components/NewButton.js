@@ -4,16 +4,16 @@
 import Component from '../Actions/Component.js'
 import Router from '../Actions/Router.js'
 
-export default function Component_NewButton(options) {
-    const id = `${options.id}-new-button`;
+export default function Component_NewButton(param) {
+    const id = `${param.id}-new-button`;
 
     return Component({
         id: id,
         type: 'newbutton',
         html: /*html*/ `
             <span id=${id} class='new-button' >
-                <!-- &plus; Add new ${options.newLabel} -->
-                ${options.icon}
+                <!-- &plus; Add new ${param.newLabel} -->
+                ${param.icon}
             </span>
         `,
         style: /*css*/ `
@@ -28,9 +28,9 @@ export default function Component_NewButton(options) {
                 fill: ${app.primaryColor};
             }
         `,
-        adjacentElement: options.parent, // #TODO: remove hard coded class
-        root: options.root,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent, // #TODO: remove hard coded class
+        root: param.root,
+        position: param.position || 'beforeend',
         events: [
             {
                 selector: `#${id}`,
@@ -41,6 +41,6 @@ export default function Component_NewButton(options) {
     });
 
     function showNewForm(event) {
-        Router(`${options.list}/NewForm`);
+        Router(`${param.list}/NewForm`);
     }
 }

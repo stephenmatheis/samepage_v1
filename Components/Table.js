@@ -7,7 +7,7 @@ import Get from '../Actions/Get.js'
 /* Components */
 import Component_HoverForm from './HoverForm.js'
 
-export default function Component_Table(options) {
+export default function Component_Table(param) {
     const {
         heading,
         toolbar,
@@ -16,9 +16,9 @@ export default function Component_Table(options) {
         headers,
         rows,
         tables
-    } = options;
+    } = param;
     
-    const id = `${options.id}-table`;
+    const id = `${param.id}-table`;
 
     let viewTables = tables;
     let hoverForm;
@@ -175,8 +175,8 @@ export default function Component_Table(options) {
                 background: mediumseagreen url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cG9seWxpbmUgcG9pbnRzPSIyMCA2IDkgMTcgNCAxMiI+PC9wb2x5bGluZT48L3N2Zz4=) center no-repeat;
             }
         `,
-        adjacentElement: options.parent,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent,
+        position: param.position || 'beforeend',
         events: [
             {
                 selector: `#${id} thead tr th input[type="checkbox"]`,
@@ -256,7 +256,7 @@ export default function Component_Table(options) {
             `
         }
 
-        options.table.columns.forEach((column) => {
+        param.table.columns.forEach((column) => {
             headers += /*html*/ `
                 <th>${column}</th>
             `;
@@ -275,7 +275,7 @@ export default function Component_Table(options) {
             <tbody>
         `;
        
-        options.data.forEach((item) => {
+        param.data.forEach((item) => {
             rows += /*html*/ `
                 <tr data-itemid=${item.Id}>
             `
@@ -293,7 +293,7 @@ export default function Component_Table(options) {
             }
 
             // First column th not td
-            const firstField = options.table.fields[0];
+            const firstField = param.table.fields[0];
             const type = firstField.includes('Date'); // Hack.
             const value = type ? new Date(item[firstField]).toLocaleDateString() : item[firstField];
 
@@ -305,7 +305,7 @@ export default function Component_Table(options) {
                 </th>
             `;
 
-            options.table.fields
+            param.table.fields
             .slice(1)
             .forEach((field, index) => {
                 const type = field.includes('Date'); // Hack.
@@ -338,12 +338,12 @@ export default function Component_Table(options) {
         return hover ? `data-hover="${hover.column}"` : ""
     }
 
-    /** On row lick, fire passed in [options.action] callback */
+    /** On row lick, fire passed in [param.action] callback */
     function runAction(event) {
         const itemId = parseInt(this.dataset.itemid);
 
-        if (options.action) {
-            options.action(itemId);
+        if (param.action) {
+            param.action(itemId);
         }
     }
 
@@ -411,7 +411,7 @@ export default function Component_Table(options) {
         const rowCount = document.querySelectorAll(`#${id} tbody tr td input[type="checkbox"]`).length;
 
         const actionData = {
-            list: options.list,
+            list: param.list,
             node: this.closest('tr'),
             table: component,
             heading,
@@ -461,9 +461,9 @@ export default function Component_Table(options) {
 
             // Get full item by id
             const itemId = parseInt(this.dataset.itemid);
-            const item = options.data.filter(item => item.Id === itemId)[0];
+            const item = param.data.filter(item => item.Id === itemId)[0];
 
-            // Define Get options
+            // Define Get param
             const hover = hoverFields.filter(hoverField => hoverField.column === this.dataset.hover)[0];
             const field = hover.field;
             const lookupValue = (hover.dataType === 'string') ? `'${item[field]}'` : item[field];

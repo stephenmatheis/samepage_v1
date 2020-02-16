@@ -3,11 +3,11 @@
 import Component from '../../Actions/Component.js'
 import Router from '../../Actions/Router.js'
 
-export default function Component_SideBar(options) {
+export default function Component_SideBar(param) {
     const {
         id,
         route
-    } = options;
+    } = param;
 
     return Component({
         id: id,
@@ -111,7 +111,7 @@ export default function Component_SideBar(options) {
                 justify-content: flex-end;
             }
         `,
-        adjacentElement:options.parent,
+        adjacentElement:param.parent,
         position: 'afterbegin',
         events: [
             {

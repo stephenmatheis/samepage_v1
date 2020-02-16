@@ -3,7 +3,7 @@
 /* Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_Button(options) {
+export default function Component_Button(param) {
     const {
         id,
         color,
@@ -13,7 +13,7 @@ export default function Component_Button(options) {
         parent,
         position,
         action
-    } = options;
+    } = param;
 
     const componentId = `${id}-button`;
 

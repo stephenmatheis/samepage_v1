@@ -3,14 +3,14 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_ItemForm(options) {
-    const id = `${options.id}-item-form`;
+export default function Component_ItemForm(param) {
+    const id = `${param.id}-item-form`;
 
     return Component({
         id: id,
         type: 'itemform',
         html: /*html*/ `
-            <div id=${id} data-list=${options.list} data-itemid=${options.item.Id}>
+            <div id=${id} data-list=${param.list} data-itemid=${param.item.Id}>
                 ${createFormHTML()}
             </div>
         `,
@@ -47,8 +47,8 @@ export default function Component_ItemForm(options) {
                 border: solid 2px ${app.primaryColor};
             }
         `,
-        adjacentElement: options.parent,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent,
+        position: param.position || 'beforeend',
         events: [
 
         ]
@@ -57,11 +57,11 @@ export default function Component_ItemForm(options) {
     function createFormHTML() {
         let html = '';
 
-        options.labels.forEach((label, index) => {
+        param.labels.forEach((label, index) => {
             html += /*html*/ `
                 <div class='item-form-row'>
                     <div class='item-form-label'>${label}</div>
-                    <div class='item-form-field' contenteditable="true" data-internalfieldname=${options.fields[index]}>${options.item[options.fields[index]]}</div>
+                    <div class='item-form-field' contenteditable="true" data-internalfieldname=${param.fields[index]}>${param.item[param.fields[index]]}</div>
                 </div>
             `;
         });

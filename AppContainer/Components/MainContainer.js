@@ -2,18 +2,18 @@
 
 import Component from '../../Actions/Component.js'
 
-export default function Component_MainContainer(options) {
+export default function Component_MainContainer(param) {
     return Component({
-        id: options.id,
+        id: param.id,
         type: 'maincontainer',
         html: /*html*/ `
-            <div id=${options.id}>
+            <div id=${param.id}>
                 
             </div>
         `,
         canRemoveStyle: 'no',
         style: /*css*/ `
-            #${options.id} {
+            #${param.id} {
                 /* display: flex;
                 flex-direction: column; */
                 padding: 20px 50px;
@@ -22,7 +22,7 @@ export default function Component_MainContainer(options) {
                 overflow: overlay;
             }
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend',
         events: []
     });

@@ -3,8 +3,8 @@
 /* Components */
 import Component from '../Actions/Component.js'
 
-export default function Component_LoadingBar(options) {
-    const id = `${options.id}-loading-bar`;
+export default function Component_LoadingBar(param) {
+    const id = `${param.id}-loading-bar`;
 
     const loadingBar = Component({
         id,
@@ -15,7 +15,7 @@ export default function Component_LoadingBar(options) {
                     <div>app</div>
                 </div> -->
                 <div class='loading-message'>
-                    <div id='loading-message-text'>Loading ${options.list}...</div>
+                    <div id='loading-message-text'>Loading ${param.list}...</div>
                     <div class='loading-bar-container'>
                         <div class='loading-bar-status'></div>
                     </div>
@@ -87,7 +87,7 @@ export default function Component_LoadingBar(options) {
                 }
             }
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend'
     });
 
@@ -98,7 +98,7 @@ export default function Component_LoadingBar(options) {
         },
         update: (counter) => {
             const progressBar = document.querySelector('.loading-bar-status');
-            const total = Math.ceil(options.itemCount / 100);
+            const total = Math.ceil(param.itemCount / 100);
 
             if (progressBar) {
                 progressBar.style.width = `${(counter / total) * 100}%`;

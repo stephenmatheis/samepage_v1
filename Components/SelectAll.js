@@ -3,14 +3,14 @@
 /* Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_SelectAll(options) {
+export default function Component_SelectAll(param) {
     const {
         id,
         root,
         parent,
         position,
         tables
-    } = options;
+    } = param;
 
     const componentId = `${id}-select-all`;
 

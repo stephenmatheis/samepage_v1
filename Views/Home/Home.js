@@ -2,6 +2,6 @@
 
 import Component from '../../Actions/Component.js'
 
-export default function Home(options) {
+export default function Home(param) {
     
 }

@@ -4,7 +4,7 @@ import Component_SideBar from './Components/SideBar.js'
 import Component_AppContainer from './Components/AppContainer.js'
 import Component_MainContainer from './Components/MainContainer.js'
 
-export default function View_AppContainer(options) {
+export default function View_AppContainer(param) {
     const appContainer = Component_AppContainer({
         id: 'app-container',
         adjacentElement: '#app'
@@ -15,7 +15,7 @@ export default function View_AppContainer(options) {
     const sideBar = Component_SideBar({
         id: 'sidebar',
         adjacentElement: `#${appContainer.id}`,
-        route: options.route
+        route: param.route
     });
 
     sideBar.add();

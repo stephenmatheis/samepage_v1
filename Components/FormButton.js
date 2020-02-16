@@ -3,14 +3,14 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_FormButton(options) {
-    const id = `${options.id}-${options.type}-form-button`;
+export default function Component_FormButton(param) {
+    const id = `${param.id}-${param.type}-form-button`;
 
     return Component({
         id: id,
-        type: `${options.type}button`,
+        type: `${param.type}button`,
         html: /*html*/ `
-            <div id=${id} class="form-button ${options.type}-button">${options.value}</div>
+            <div id=${id} class="form-button ${param.type}-button">${param.value}</div>
         `,
         style: /*css*/ `
             .form-button {
@@ -48,15 +48,15 @@ export default function Component_FormButton(options) {
                 box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
             } */
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend',
         events: [
             {
                 selector: `#${id}`,
                 event: 'click',
                 listener: (event) => {
-                    if (options.action) {
-                        options.action();
+                    if (param.action) {
+                        param.action();
                     }
                 }
             }

@@ -3,14 +3,14 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_NewForm(options) {
-    const id = `${options.id}-new-form`;
+export default function Component_NewForm(param) {
+    const id = `${param.id}-new-form`;
 
     return Component({
         id: id,
         type: 'newform',
         html: /*html*/ `
-            <div id=${id} data-list=${options.list}>
+            <div id=${id} data-list=${param.list}>
                 ${createFormHTML()}
             </div>
         `,
@@ -46,7 +46,7 @@ export default function Component_NewForm(options) {
                 border: solid 2px ${app.primaryColor};
             }
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend',
         events: [
   
@@ -62,11 +62,11 @@ export default function Component_NewForm(options) {
         ];
         /*** TEST VALUES ***/
 
-        options.labels.forEach((label, index) => {
+        param.labels.forEach((label, index) => {
             html += /*html*/ `
                 <div class='new-form-row'>
                     <div class='new-form-label'>${label}</div>
-                    <div class='new-form-field' contenteditable="true" data-internalfieldname=${options.fields[index]}><!-- testValues[index] --></div>
+                    <div class='new-form-field' contenteditable="true" data-internalfieldname=${param.fields[index]}><!-- testValues[index] --></div>
                 </div>
             `;
         });

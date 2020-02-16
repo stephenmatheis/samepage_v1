@@ -1,6 +1,6 @@
 /** (C) Stephen Matheis 2019 */
 
-export default function Component(options) {
+export default function Component(param) {
     const {
         container,
         html,
@@ -8,7 +8,7 @@ export default function Component(options) {
         adjacentElement,
         position,
         events,
-    } = options;
+    } = param;
 
     const component = {
         id: app.setComponentId(),

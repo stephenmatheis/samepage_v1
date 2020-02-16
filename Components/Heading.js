@@ -2,12 +2,12 @@
 
 import Component from '../Actions/Component.js'
 
-export default function Component_Heading(options) {
+export default function Component_Heading(param) {
     const {
         id,
         parent,
         text,
-    } = options;
+    } = param;
 
     const componentId = `${id}-heading`;
 

@@ -3,14 +3,14 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_Container(options) {
-    const id = `${options.id}-container`;
+export default function Component_Container(param) {
+    const id = `${param.id}-container`;
 
     return Component({
         id: id,
         type: 'container',
         html: /*html*/ `
-            <div id=${id} class='container container-${options.align}'></div>
+            <div id=${id} class='container container-${param.align}'></div>
         `,
         style: /*css*/ `
             .container {
@@ -49,8 +49,8 @@ export default function Component_Container(options) {
                 position: absolute;
             }
         `,
-        adjacentElement: options.parent,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent,
+        position: param.position || 'beforeend',
         events: [
             
         ]

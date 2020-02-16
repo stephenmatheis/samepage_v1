@@ -3,7 +3,7 @@
 /* Components */
 import Component from '../Actions/Component.js'
 
-export default function Component_HoverForm(options) {
+export default function Component_HoverForm(param) {
     const {
         id,
         parent,
@@ -11,7 +11,7 @@ export default function Component_HoverForm(options) {
         top,
         left,
         data
-    } = options;
+    } = param;
 
     const componentId = `${id}-hover-form`;
 

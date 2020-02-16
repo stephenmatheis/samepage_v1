@@ -3,8 +3,8 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_List(options) {
-    const id = `${options.id}-list`;
+export default function Component_List(param) {
+    const id = `${param.id}-list`;
 
     return Component({
         id: id,
@@ -35,7 +35,7 @@ export default function Component_List(options) {
                 font-weight: bold;
             }
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend',
         events: [
 

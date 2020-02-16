@@ -3,13 +3,13 @@
 /* Components */
 import Component from '../Actions/Component.js'
 
-export default function Component_Notification(options) {
+export default function Component_Notification(param) {
     return Component({
         id: 'app-notification',
         type: 'notification',
         html: /*html*/ `
             <div id='app-notification' class='notification'>
-                ${options.text}
+                ${param.text}
             </div>
         `,
         style: /*css*/ `

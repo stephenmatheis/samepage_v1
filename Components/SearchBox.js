@@ -3,13 +3,13 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_SearchBox(options) {
+export default function Component_SearchBox(param) {
     const {
         id,
         parent,
         position,
         action
-    } = options;
+    } = param;
 
     const componentId = `${id}-search-box`;
 

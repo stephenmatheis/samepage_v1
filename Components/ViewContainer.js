@@ -2,8 +2,8 @@
 
 import Component from '../Actions/Component.js'
 
-export default function Component_ViewContainer(options) {
-    const id = `${options.id}-view-container`
+export default function Component_ViewContainer(param) {
+    const id = `${param.id}-view-container`
     return Component({
         id: id,
         type: id,
@@ -18,7 +18,7 @@ export default function Component_ViewContainer(options) {
                 flex-direction: column; */
             }
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend',
         events: []
     });

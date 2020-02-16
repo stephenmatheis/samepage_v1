@@ -3,8 +3,8 @@
 /* Global Actions */
 import Component from '../Actions/Component.js'
 
-export default function Component_Toolbar(options) {
-    const id = `${options.id}-table-toolbar`;
+export default function Component_Toolbar(param) {
+    const id = `${param.id}-table-toolbar`;
 
     return Component({
         id: id,
@@ -26,8 +26,8 @@ export default function Component_Toolbar(options) {
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
             }
         `,
-        adjacentElement: options.parent,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent,
+        position: param.position || 'beforeend',
         events: [
             
         ]

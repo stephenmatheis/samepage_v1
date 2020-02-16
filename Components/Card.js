@@ -3,8 +3,8 @@
 /* Components */
 import Component from '../Actions/Component.js'
 
-export default function Component_Card(options) {
-    const id = `${options.id}-card`;
+export default function Component_Card(param) {
+    const id = `${param.id}-card`;
 
     return Component({
         id: id,
@@ -12,7 +12,7 @@ export default function Component_Card(options) {
         html: /*html*/ `
             <div id=${id} class='card'>
                 <!-- <div class='card-title'>
-                    <div class='card-title-name'>${options.name}</div>
+                    <div class='card-title-name'>${param.name}</div>
                 </div> -->
             </div>
         `,
@@ -44,8 +44,8 @@ export default function Component_Card(options) {
                 color: ${app.secondaryColor};
             }
         `,
-        adjacentElement: options.parent,
-        position: options.position || 'beforeend',
+        adjacentElement: param.parent,
+        position: param.position || 'beforeend',
         events: [
             
         ]

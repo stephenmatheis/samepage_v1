@@ -2,8 +2,8 @@
 
 import Component from '../Actions/Component.js'
 
-export default function Component_Form(options) {
-    const id = `${options.id}-form`;
+export default function Component_Form(param) {
+    const id = `${param.id}-form`;
 
     return Component({
         id: id,
@@ -23,7 +23,7 @@ export default function Component_Form(options) {
                 /* overscroll-behavior: contain; /* Prevent parent scroll while cursor in card */
             }
         `,
-        adjacentElement: options.parent,
+        adjacentElement: param.parent,
         position: 'beforeend',
         events: [
 
