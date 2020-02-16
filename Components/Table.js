@@ -1,7 +1,7 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Global Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 import Get from '../Actions/Get.js'
 
 /* Components */
@@ -23,7 +23,7 @@ export default function Component_Table(options) {
     let viewTables = tables;
     let hoverForm;
 
-    const component = Create_Component({
+    const component = Component({
         id: id,
         type: 'table',
         html: /*html*/ `

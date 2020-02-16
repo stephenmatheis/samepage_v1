@@ -1,10 +1,10 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Components */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_Notification(options) {
-    return Create_Component({
+    return Component({
         id: 'ictl-notification',
         type: 'notification',
         html: /*html*/ `

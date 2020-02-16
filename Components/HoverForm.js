@@ -1,7 +1,7 @@
 /** (C) Stephen Matheis 2019 */
 
 /* Components */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_HoverForm(options) {
     const {
@@ -15,7 +15,7 @@ export default function Component_HoverForm(options) {
 
     const componentId = `${id}-hover-form`;
 
-    return Create_Component({
+    return Component({
         id: componentId,
         type: 'hover-form',
         html: /*html*/ `

@@ -1,6 +1,6 @@
 /* (C) 2019 Stephen Matheis */
 
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_Heading(options) {
     const {
@@ -11,7 +11,7 @@ export default function Component_Heading(options) {
 
     const componentId = `${id}-heading`;
 
-    return Create_Component({
+    return Component({
         id: componentId,
         type: 'heading',
         html: /*html*/ `

@@ -1,7 +1,7 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Global Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_SearchBox(options) {
     const {
@@ -13,7 +13,7 @@ export default function Component_SearchBox(options) {
 
     const componentId = `${id}-search-box`;
 
-    return Create_Component({
+    return Component({
         id: componentId,
         type: 'search-box',
         html: /*html*/ `

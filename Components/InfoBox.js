@@ -1,7 +1,7 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Global Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_InfoBox(options) {
     const {
@@ -14,7 +14,7 @@ export default function Component_InfoBox(options) {
 
     const id = `${options.id}-info-box`;
 
-    const component = Create_Component({
+    const component = Component({
         id: id,
         type: 'info-box',
         html: /*html*/ `

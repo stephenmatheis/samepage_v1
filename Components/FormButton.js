@@ -1,12 +1,12 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Global Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_FormButton(options) {
     const id = `${options.id}-${options.type}-form-button`;
 
-    return Create_Component({
+    return Component({
         id: id,
         type: `${options.type}button`,
         html: /*html*/ `

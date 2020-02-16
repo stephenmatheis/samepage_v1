@@ -6,7 +6,7 @@ import Store from './Actions/Store.js'
 import Router from './Actions/Router.js'
 
 /* App Parts */
-import View_AppContainer from './AppContainer/AppParts/AppContainer.js'
+import View_AppContainer from './AppContainer/AppContainer.js'
 
 window.onload = main;
 

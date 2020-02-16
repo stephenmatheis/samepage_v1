@@ -1,12 +1,12 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Global Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_NewForm(options) {
     const id = `${options.id}-new-form`;
 
-    return Create_Component({
+    return Component({
         id: id,
         type: 'newform',
         html: /*html*/ `

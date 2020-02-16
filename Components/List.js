@@ -1,12 +1,12 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Global Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_List(options) {
     const id = `${options.id}-list`;
 
-    return Create_Component({
+    return Component({
         id: id,
         type: 'list',
         html: /*html*/ `

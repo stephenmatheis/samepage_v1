@@ -1,7 +1,7 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_Button(options) {
     const {
@@ -17,7 +17,7 @@ export default function Component_Button(options) {
 
     const componentId = `${id}-button`;
 
-    const component = Create_Component({
+    const component = Component({
         id: componentId,
         type: 'newbutton',
         html: /*html*/ `

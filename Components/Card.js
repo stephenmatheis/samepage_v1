@@ -1,12 +1,12 @@
 /** (C) Stephen Matheis 2019 */
 
 /* Components */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_Card(options) {
     const id = `${options.id}-card`;
 
-    return Create_Component({
+    return Component({
         id: id,
         type: 'card',
         html: /*html*/ `

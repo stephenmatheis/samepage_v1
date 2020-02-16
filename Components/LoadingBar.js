@@ -1,12 +1,12 @@
 /** (C) Stephen Matheis 2019 */
 
 /* Components */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 
 export default function Component_LoadingBar(options) {
     const id = `${options.id}-loading-bar`;
 
-    const loadingBar = Create_Component({
+    const loadingBar = Component({
         id,
         type: 'loadingbar',
         html: /*html*/ `
@@ -107,7 +107,7 @@ export default function Component_LoadingBar(options) {
         end: () => {
             return new Promise((resolve, reject) => {
                 /** #TODO: Reference component directly not through the DOM. 
-                 *         DOM traversal should be implemented in Create_Component.js 
+                 *         DOM traversal should be implemented in Component.js 
                  * */
                 const loadingBar = document.querySelector('.loading-bar');
 

@@ -1,6 +1,6 @@
 /** (C) Stephen Matheis 2019 */
 
-export default function Create_Component(options) {
+export default function Component(options) {
     const {
         id,
         container,

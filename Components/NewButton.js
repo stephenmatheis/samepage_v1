@@ -1,13 +1,13 @@
 /* (C) 2019 Stephen Matheis */
 
 /* Actions */
-import Create_Component from '../Actions/Create_Component.js'
+import Component from '../Actions/Component.js'
 import Router from '../Actions/Router.js'
 
 export default function Component_NewButton(options) {
     const id = `${options.id}-new-button`;
 
-    return Create_Component({
+    return Component({
         id: id,
         type: 'newbutton',
         html: /*html*/ `
