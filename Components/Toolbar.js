@@ -8,11 +8,12 @@ export default function Component_Toolbar(param) {
         adjacentElement
     } = param;
     
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='table-toolbar'>
-            
-            </div>
+            <div id='${id}' class='table-toolbar'></div>
         `,
         style: /*css*/ `
             .table-toolbar {

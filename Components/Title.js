@@ -6,10 +6,13 @@ export default function Component_Title(param) {
     const {
         adjacentElement
     } = param;
+
+    const id = app.setComponentId();
     
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='title'>
+            <div id='${id}' class='title'>
                 <h1>${param.title}</h1>
             </div>
         `,

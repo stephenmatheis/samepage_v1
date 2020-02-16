@@ -7,10 +7,13 @@ export default function Component_List(param) {
     const {
         adjacentElement
     } = param;
+
+    const id = app.setComponentId();
     
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='list'>
+            <div id='${id}' class='list'>
                 ${createListHTML()}
             </div>
         `,

@@ -7,10 +7,13 @@ export default function Component_Card(param) {
     const {
         adjacentElement
     } = param;
+
+    const id = app.setComponentId();
     
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='card'>
+            <div id='${id}' class='card'>
                 <!-- <div class='card-title'>
                     <div class='card-title-name'>${param.name}</div>
                 </div> -->

@@ -8,10 +8,13 @@ export default function Component_NewButton(param) {
     const {
         adjacentElement
     } = param;
+
+    const id = app.setComponentId();
     
     return Component({
+        id,
         html: /*html*/ `
-            <span id=${id} class='new-button' >
+            <span id='${id}' class='new-button' >
                 <!-- &plus; Add new ${param.newLabel} -->
                 ${param.icon}
             </span>

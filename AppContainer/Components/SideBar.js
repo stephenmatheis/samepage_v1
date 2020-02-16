@@ -8,10 +8,13 @@ export default function Component_SideBar(param) {
         route,
         adjacentElement
     } = param;
+    
+    const id = app.setComponentId();
 
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class="sidebar">
+            <div id='${id}' class="sidebar">
                 <div class="nav-container">
                     <span class="sidebar-route ${(route === "") ? "sidebar-selected" : ""} home" id="Home">
                         <svg class="icon"><use href="#icon-home"></use></svg>

@@ -6,10 +6,13 @@ export default function Component_Form(param) {
     const {
         adjacentElement
     } = param;
-    
+
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='form'></div>
+            <div id='${id}' class='form'></div>
         `,
         style: /*css*/ `
             /* Container */

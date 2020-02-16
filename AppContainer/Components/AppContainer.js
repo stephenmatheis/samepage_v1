@@ -7,9 +7,12 @@ export default function Component_AppContainer(param) {
         adjacentElement
     } = param;
     
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${param.id}></div>
+            <div id='${id}'></div>
         `,
         style: /*css*/ `
             #${param.id} {

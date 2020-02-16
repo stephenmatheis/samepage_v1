@@ -16,9 +16,12 @@ export default function Component_Table(param) {
     
     let viewTables = tables;
 
+    const id = app.setComponentId();
+
     const component = Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class="table-container">
+            <div id='${id}' class="table-container">
                 <table class="table">
                     ${createTableHTML()}
                 </table>

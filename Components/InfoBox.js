@@ -13,9 +13,12 @@ export default function Component_InfoBox(param) {
         total
     } = param;
 
+    const id = app.setComponentId();
+
     const component = Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='info-box'>
+            <div id='${id}' class='info-box'>
                 <div>
                     <span>Page</span>
                     <span class="page-count">${page}</span>

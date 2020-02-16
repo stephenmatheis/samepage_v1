@@ -4,10 +4,17 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Notification(param) {
+    const {
+        text
+    } = param;
+
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id='app-notification' class='notification'>
-                ${param.text}
+            <div id=''${id}'' class='notification'>
+                ${text}
             </div>
         `,
         style: /*css*/ `

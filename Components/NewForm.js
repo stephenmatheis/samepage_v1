@@ -8,9 +8,12 @@ export default function Component_NewForm(param) {
         adjacentElement
     } = param;
     
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} data-list=${param.list}>
+            <div id='${id}' data-list=${param.list}>
                 ${createFormHTML()}
             </div>
         `,

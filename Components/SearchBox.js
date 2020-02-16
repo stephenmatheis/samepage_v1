@@ -10,9 +10,12 @@ export default function Component_SearchBox(param) {
         action
     } = param;
 
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='search-box'>
+            <div id='${id}' class='search-box'>
                 <svg class="icon">
                     <use href="#icon-search"></use>
                 </svg>    

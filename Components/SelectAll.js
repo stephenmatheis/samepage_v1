@@ -10,7 +10,10 @@ export default function Component_SelectAll(param) {
         tables
     } = param;
 
+    const id = app.setComponentId();
+
     const component = Component({
+        id,
         html: /*html*/ `
             <div class="select-all-container">
                 <label class="select-all">

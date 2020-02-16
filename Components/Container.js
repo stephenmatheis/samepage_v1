@@ -7,10 +7,13 @@ export default function Component_Container(param) {
     const {
         adjacentElement
     } = param;
+
+    const id = app.setComponentId();
     
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='container container-${param.align}'></div>
+            <div id='${id}' class='container container-${param.align}'></div>
         `,
         style: /*css*/ `
             .container {

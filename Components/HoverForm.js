@@ -12,9 +12,12 @@ export default function Component_HoverForm(param) {
         data
     } = param;
 
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${componentId} class="hover-form" style="top: ${top}px; left: ${left}px;">
+            <div id='${id}' class="hover-form" style="top: ${top}px; left: ${left}px;">
                 ${data.Title}
             </div>
         `,

@@ -7,10 +7,13 @@ export default function Component_FormButton(param) {
     const {
         adjacentElement
     } = param;
+
+    const id = app.setComponentId();
     
     return Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class="form-button ${param.type}-button">${param.value}</div>
+            <div id='${id}' class="form-button ${param.type}-button">${param.value}</div>
         `,
         style: /*css*/ `
             .form-button {

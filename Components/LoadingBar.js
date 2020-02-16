@@ -8,9 +8,12 @@ export default function Component_LoadingBar(param) {
         adjacentElement
     } = param;
     
+    const id = app.setComponentId();
+
     const loadingBar = Component({
+        id,
         html: /*html*/ `
-            <div id=${id} class='loading-bar'>
+            <div id='${id}' class='loading-bar'>
                 <!-- <div class='hello-message'>
                     <div>app</div>
                 </div> -->

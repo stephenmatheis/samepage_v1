@@ -14,9 +14,12 @@ export default function Component_Button(param) {
         action
     } = param;
 
+    const id = app.setComponentId();
+
     const component = Component({
+        id,
         html: /*html*/ `
-            <span id=${componentId} class='button ${color || ''} ${disabled ? 'disabled' : ''}' >
+            <span id='${id}' class='button ${color || ''} ${disabled ? 'disabled' : ''}' >
                 ${icon}
             </span>
         `,
@@ -59,7 +62,7 @@ export default function Component_Button(param) {
         position: position || 'beforeend',
         events: [
             {
-                selector: `#${componentId}`,
+                selector: `#${id}`,
                 event: 'click',
                 listener: runAction
             }
@@ -73,13 +76,13 @@ export default function Component_Button(param) {
     }
 
     component.enable = () => {
-        const button = document.querySelector(`#${componentId}`);
+        const button = document.querySelector(`#${id}`);
 
         button.classList.remove('disabled');
     }
 
     component.disable = () => {
-        const button = document.querySelector(`#${componentId}`);
+        const button = document.querySelector(`#${id}`);
 
         button.classList.add('disabled');
     }

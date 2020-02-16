@@ -2,7 +2,7 @@
 
 export default function Component(param) {
     const {
-        container,
+        id,
         html,
         style,
         adjacentElement,
@@ -11,7 +11,7 @@ export default function Component(param) {
     } = param;
 
     const component = {
-        id: app.setComponentId(),
+        id,
         container,
         html,
         style,
@@ -19,7 +19,7 @@ export default function Component(param) {
         position,
         events,
         get() {
-            return document.querySelector(`#${id}`);
+            return document.querySelector(`#${component.id}`);
         },
         remove() {
             app.store.remove(component);
@@ -61,7 +61,7 @@ export default function Component(param) {
     }
 
     function register() {
-        app.store.add(component);
+        app.store.addComponent(component);
     }
 
     function addEventListeners(events) {

@@ -7,7 +7,10 @@ export default function Component_MainContainer(param) {
         adjacentElement
     } = param;
     
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
             <div id=${param.id}>
                 

@@ -8,7 +8,10 @@ export default function Component_Heading(param) {
         text,
     } = param;
 
+    const id = app.setComponentId();
+
     return Component({
+        id,
         html: /*html*/ `
             <div id=${componentId} class="heading">
                 <div>${text}</div>
