@@ -21,7 +21,7 @@ export default function View_AppContainer(options) {
     sideBar.add();
 
     const mainContainer = Component_MainContainer({
-        id: ICTL.mainContainerId,
+        id: 'main-container',
         parent: `#${appContainer.id}`
     });
 

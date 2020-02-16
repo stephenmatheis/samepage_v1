@@ -8,7 +8,9 @@ import Router from './Actions/Router.js'
 /* App Parts */
 import View_AppContainer from './AppContainer/AppParts/AppContainer.js'
 
-window.onload = async () => {
+window.onload = main;
+
+async function main() {
     // Load data
     const data = await Data();
 
