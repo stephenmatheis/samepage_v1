@@ -31,8 +31,6 @@ export default function Router(route) {
 
     function addTitle(displayText) {
         const title = Title({
-            id: view.toLowerCase() || 'home',
-            adjacentElement: viewContainerId,
             title: displayText
         });
 

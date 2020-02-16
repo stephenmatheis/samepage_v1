@@ -6,24 +6,23 @@ import Component_MainContainer from './Components/MainContainer.js'
 
 export default function View_AppContainer(param) {
     const appContainer = Component_AppContainer({
-        id: 'app-container',
-        adjacentElement: '#app'
+        adjacentElement: app.getApp()
     });
     
+    app.store.setAppContainer(appContainer);
     appContainer.add();
 
     const sideBar = Component_SideBar({
-        id: 'sidebar',
-        adjacentElement: `#${appContainer.id}`,
+        adjacentElement: appContainer,
         route: param.route
     });
 
     sideBar.add();
 
     const mainContainer = Component_MainContainer({
-        id: 'main-container',
-        adjacentElement: `#${appContainer.id}`
+        adjacentElement: appContainer
     });
 
+    app.store.setMainContainer(mainContainer);
     mainContainer.add();
 }

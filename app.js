@@ -24,6 +24,9 @@ async function main() {
         secondaryColor: 'whitesmoke',
         highlightColor: '#f6b73c',
         store: Store(),
+        getApp() {
+            return document.querySelector('#app');
+        },
         setComponentId() {
             return componentId++;
         }

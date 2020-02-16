@@ -50,12 +50,12 @@ export default function Component(param) {
     }
 
     function insertHTML() {
-        if (adjacentElement) {
-            adjacentElement.insertAdjacentHTML(position, html);
+        const element = adjacentElement.get() || app.store.getMainContainer().get();
+        
+        element.insertAdjacentHTML(position, html);
 
-            register();
-            addEventListeners(events);
-        }
+        register();
+        addEventListeners(events);
     }
 
     function register() {
