@@ -124,7 +124,7 @@ export default function Component_AppContainer(param) {
               animation-fill-mode: both;
             }
         `,
-        parent: param.parent,
+        adjacentElement: param.parent,
         position: 'afterbegin',
         events: []
     });

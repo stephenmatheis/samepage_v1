@@ -49,7 +49,7 @@ export default function Component_Container(options) {
                 position: absolute;
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: options.position || 'beforeend',
         events: [
             

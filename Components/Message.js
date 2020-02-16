@@ -32,7 +32,7 @@ export default function Component_Heading(options) {
                 color: ${app.defaultColor};
             }
         `,
-        parent: parent,
+        adjacentElement: parent,
         position: 'beforeend',
         events: [
             

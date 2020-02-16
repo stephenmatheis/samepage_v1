@@ -62,7 +62,7 @@ export default function Component_InfoBox(options) {
                 font-weight: 500;
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: options.position || 'beforeend',
         events: [
             

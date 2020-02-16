@@ -28,7 +28,7 @@ export default function Component_NewButton(options) {
                 fill: ${app.primaryColor};
             }
         `,
-        parent: options.parent, // #TODO: remove hard coded class
+        adjacentElement: options.parent, // #TODO: remove hard coded class
         root: options.root,
         position: options.position || 'beforeend',
         events: [

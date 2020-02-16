@@ -14,15 +14,19 @@ async function main() {
     // Load data
     const data = await Data();
 
+    let componentId = 1;
+
     // Define app Namespace. Could make this it's own module.
     window.app = {
         data: data,
-        mainContainerId: 'main-container',
         defaultColor: 'darkslategray;',
         primaryColor: 'mediumpurple',
         secondaryColor: 'whitesmoke',
         highlightColor: '#f6b73c',
-        store: Store()
+        store: Store(),
+        setComponentId() {
+            return componentId++;
+        }
     };
 
     // Get current route

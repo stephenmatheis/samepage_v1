@@ -46,7 +46,7 @@ export default function Component_NewForm(options) {
                 border: solid 2px ${app.primaryColor};
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: [
   

@@ -7,14 +7,14 @@ import Component_MainContainer from './Components/MainContainer.js'
 export default function View_AppContainer(options) {
     const appContainer = Component_AppContainer({
         id: 'app-container',
-        parent: '#app'
+        adjacentElement: '#app'
     });
     
     appContainer.add();
 
     const sideBar = Component_SideBar({
         id: 'sidebar',
-        parent: `#${appContainer.id}`,
+        adjacentElement: `#${appContainer.id}`,
         route: options.route
     });
 
@@ -22,7 +22,7 @@ export default function View_AppContainer(options) {
 
     const mainContainer = Component_MainContainer({
         id: 'main-container',
-        parent: `#${appContainer.id}`
+        adjacentElement: `#${appContainer.id}`
     });
 
     mainContainer.add();

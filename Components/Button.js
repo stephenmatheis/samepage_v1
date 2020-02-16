@@ -59,7 +59,7 @@ export default function Component_Button(options) {
                 fill: lightgray;
             }
         `,
-        parent: parent,
+        adjacentElement: parent,
         root: root,
         position: position || 'beforeend',
         events: [

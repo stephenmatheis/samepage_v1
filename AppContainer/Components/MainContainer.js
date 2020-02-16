@@ -22,7 +22,7 @@ export default function Component_MainContainer(options) {
                 overflow: overlay;
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: []
     });

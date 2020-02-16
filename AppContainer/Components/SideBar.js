@@ -111,7 +111,7 @@ export default function Component_SideBar(options) {
                 justify-content: flex-end;
             }
         `,
-        parent:options.parent,
+        adjacentElement:options.parent,
         position: 'afterbegin',
         events: [
             {

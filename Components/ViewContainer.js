@@ -18,7 +18,7 @@ export default function Component_ViewContainer(options) {
                 flex-direction: column; */
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: []
     });

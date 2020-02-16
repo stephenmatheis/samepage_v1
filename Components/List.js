@@ -35,7 +35,7 @@ export default function Component_List(options) {
                 font-weight: bold;
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: [
 

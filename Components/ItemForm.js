@@ -47,7 +47,7 @@ export default function Component_ItemForm(options) {
                 border: solid 2px ${app.primaryColor};
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: options.position || 'beforeend',
         events: [
 

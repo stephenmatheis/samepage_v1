@@ -44,7 +44,7 @@ export default function Component_Card(options) {
                 color: ${app.secondaryColor};
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: options.position || 'beforeend',
         events: [
             

@@ -23,7 +23,7 @@ export default function Component_Form(options) {
                 /* overscroll-behavior: contain; /* Prevent parent scroll while cursor in card */
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: [
 

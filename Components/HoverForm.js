@@ -67,7 +67,7 @@ export default function Component_HoverForm(options) {
                 color: ${app.secondaryColor};
             }
         `,
-        parent: parent,
+        adjacentElement: parent,
         position: position || 'beforeend',
         events: [
             

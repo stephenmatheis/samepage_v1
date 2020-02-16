@@ -21,7 +21,7 @@ export default function Component_Title(options) {
                 margin-top: 0px;
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: [
             

@@ -36,7 +36,7 @@ export default function Component_Heading(options) {
                 text-align: center;
             }
         `,
-        parent: parent,
+        adjacentElement: parent,
         position: 'beforeend',
         events: [
             

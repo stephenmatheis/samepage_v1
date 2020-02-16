@@ -3,21 +3,19 @@
 export default function Component(options) {
     const {
         container,
-        type,
         html,
         style,
-        parent,
+        adjacentElement,
         position,
         events,
     } = options;
 
     const component = {
-        id: ,
+        id: app.setComponentId(),
         container,
-        type,
         html,
         style,
-        parent,
+        adjacentElement,
         position,
         events,
         get() {
@@ -60,8 +58,8 @@ export default function Component(options) {
     }
 
     function insertHTML() {
-            if (parent) {
-                parent.insertAdjacentHTML(position, html);
+            if (adjacentElement) {
+                adjacentElement.insertAdjacentHTML(position, html);
             }
 
             register();

@@ -87,7 +87,7 @@ export default function Component_LoadingBar(options) {
                 }
             }
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend'
     });
 

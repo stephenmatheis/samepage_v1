@@ -48,7 +48,7 @@ export default function Component_FormButton(options) {
                 box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
             } */
         `,
-        parent: options.parent,
+        adjacentElement: options.parent,
         position: 'beforeend',
         events: [
             {

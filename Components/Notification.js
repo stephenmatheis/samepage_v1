@@ -44,7 +44,7 @@ export default function Component_Notification(options) {
                 }
             }
         `,
-        parent: '#app',
+        adjacentElement: '#app',
         position: 'beforebegin',
         events: [
             

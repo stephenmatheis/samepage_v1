@@ -59,7 +59,7 @@ export default function Component_SearchBox(options) {
                 outline: none;
             }
         `,
-        parent: parent,
+        adjacentElement: parent,
         position: position || 'beforeend',
         events: [
             {
