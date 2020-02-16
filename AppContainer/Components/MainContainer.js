@@ -12,17 +12,12 @@ export default function Component_MainContainer(param) {
     return Component({
         id,
         html: /*html*/ `
-            <div id=${param.id}>
-                
-            </div>
+            <div id='${id}' class='main-container'></div>
         `,
-        canRemoveStyle: 'no',
         style: /*css*/ `
-            #${param.id} {
-                /* display: flex;
-                flex-direction: column; */
+            .main-container {
                 padding: 20px 50px;
-                flex: 1; /* Set's main area to fill remaining space of parent */
+                flex: 1;
                 height: 100vh;
                 overflow: overlay;
             }

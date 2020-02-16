@@ -25,6 +25,9 @@ async function main() {
         secondaryColor: 'whitesmoke',
         highlightColor: '#f6b73c',
         store: Store(),
+        getName() {
+            return app.name;
+        },
         setComponentId() {
             return `${app.getName()}-${componentId++}`;
         }
@@ -53,5 +56,5 @@ async function main() {
     });
 
     // Run route on page load
-    Router(route); 
+    // Router(route); 
 }

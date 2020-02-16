@@ -33,8 +33,7 @@ export default function Component_SideBar(param) {
                 flex-direction: column;
                 justify-content: flex-start;
                 height: 100vh;
-                /* background: ${app.primaryColor}; */
-                background: linear-gradient(to bottom, ${app.gradientColor}, ${app.primaryColor});
+                background: ${app.primaryColor};
                 box-shadow: inset 0px 0px 6px 0 rgba(32, 33, 36, .28);
             }
 
@@ -58,7 +57,7 @@ export default function Component_SideBar(param) {
                 margin: 10px 5px;
                 padding: 10px 15px;
                 border-radius: 12px;
-                box-shadow: -5px 3px 15px 0 rgba(140, 0, 0, 1.0);
+                box-shadow: -5px 3px 15px 0 rgba(0, 0, 0, .3);
             }
 
             .sidebar .sidebar-selected {
@@ -66,8 +65,8 @@ export default function Component_SideBar(param) {
                 padding: 10px 15px;
                 border-radius: 12px;
                 box-shadow: 
-                    inset 2px 2px 15px 0 rgb(115, 0, 0),  /* Dark */
-                    inset 0px 0px 26px 0 rgb(242, 0, 0) /* Light */
+                    inset 2px 2px 15px 0 rgb(0, 0, 0, .3),  /* Dark */
+                    inset 0px 0px 26px 0 rgb(255, 255, 255, 0.2) /* Light */
             }
 
             .sidebar .nav,
@@ -78,7 +77,7 @@ export default function Component_SideBar(param) {
 
             .sidebar .nav-selected {
                 background: ${app.secondaryColor};
-                box-shadow: -12px 0px 6px 0 rgba(140, 0, 0, 1.0);
+                box-shadow: -12px 0px 6px 0 rgba(0, 0, 0, .3);
                 border-radius: 4px 0px 0px 4px;
                 transform: translateX(6px);
             }

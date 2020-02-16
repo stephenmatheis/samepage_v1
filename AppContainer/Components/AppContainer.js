@@ -12,10 +12,10 @@ export default function Component_AppContainer(param) {
     return Component({
         id,
         html: /*html*/ `
-            <div id='${id}'></div>
+            <div id='${id}' class='app-container'></div>
         `,
         style: /*css*/ `
-            #${param.id} {
+            .app-container {
                 display: flex;
             }
 
