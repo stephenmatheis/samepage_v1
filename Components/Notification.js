@@ -42,7 +42,7 @@ export default function Component_Notification(param) {
                 }
             }
         `,
-        adjacentElement: '#app',
+        adjacentElement: app.store.getApp(),
         position: 'beforebegin',
         events: [
             

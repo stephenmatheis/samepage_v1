@@ -3,6 +3,10 @@
 import Component from '../../Actions/Component.js'
 
 export default function Component_MainContainer(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${param.id}>
@@ -20,7 +24,7 @@ export default function Component_MainContainer(param) {
                 overflow: overlay;
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: []
     });

@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Toolbar(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class='table-toolbar'>
@@ -22,7 +26,7 @@ export default function Component_Toolbar(param) {
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: param.position || 'beforeend',
         events: [
             

@@ -5,7 +5,7 @@ import Component from '../Actions/Component.js'
 
 export default function Component_HoverForm(param) {
     const {
-        parent,
+        adjacentElement,
         position,
         top,
         left,
@@ -62,7 +62,7 @@ export default function Component_HoverForm(param) {
                 color: ${app.secondaryColor};
             }
         `,
-        adjacentElement: parent,
+        adjacentElement: adjacentElement,
         position: position || 'beforeend',
         events: [
             

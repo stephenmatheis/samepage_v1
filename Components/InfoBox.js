@@ -5,6 +5,7 @@ import Component from '../Actions/Component.js'
 
 export default function Component_InfoBox(param) {
     const {
+        adjacentElement,
         page,
         pages,
         start,
@@ -58,7 +59,7 @@ export default function Component_InfoBox(param) {
                 font-weight: 500;
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: param.position || 'beforeend',
         events: [
             

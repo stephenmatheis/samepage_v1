@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_LoadingBar(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     const loadingBar = Component({
         html: /*html*/ `
             <div id=${id} class='loading-bar'>
@@ -83,7 +87,7 @@ export default function Component_LoadingBar(param) {
                 }
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend'
     });
 

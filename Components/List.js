@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_List(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class='list'>
@@ -31,7 +35,7 @@ export default function Component_List(param) {
                 font-weight: bold;
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
 

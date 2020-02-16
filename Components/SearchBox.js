@@ -5,7 +5,7 @@ import Component from '../Actions/Component.js'
 
 export default function Component_SearchBox(param) {
     const {
-        parent,
+        adjacentElement,
         position,
         action
     } = param;
@@ -54,7 +54,7 @@ export default function Component_SearchBox(param) {
                 outline: none;
             }
         `,
-        adjacentElement: parent,
+        adjacentElement: adjacentElement,
         position: position || 'beforeend',
         events: [
             {

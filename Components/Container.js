@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Container(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class='container container-${param.align}'></div>
@@ -45,7 +49,7 @@ export default function Component_Container(param) {
                 position: absolute;
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: param.position || 'beforeend',
         events: [
             

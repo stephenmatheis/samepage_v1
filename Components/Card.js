@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Card(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class='card'>
@@ -40,7 +44,7 @@ export default function Component_Card(param) {
                 color: ${app.secondaryColor};
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: param.position || 'beforeend',
         events: [
             

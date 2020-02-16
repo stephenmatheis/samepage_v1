@@ -5,8 +5,8 @@ import Router from '../../Actions/Router.js'
 
 export default function Component_SideBar(param) {
     const {
-        id,
-        route
+        route,
+        adjacentElement
     } = param;
 
     return Component({
@@ -95,7 +95,7 @@ export default function Component_SideBar(param) {
                 justify-content: flex-end;
             }
         `,
-        adjacentElement:param.parent,
+        adjacentElement:adjacentElement,
         position: 'afterbegin',
         events: [
             {

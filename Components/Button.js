@@ -5,17 +5,14 @@ import Component from '../Actions/Component.js'
 
 export default function Component_Button(param) {
     const {
-        id,
         color,
         disabled,
         icon,
         root,
-        parent,
+        adjacentElement,
         position,
         action
     } = param;
-
-    const componentId = `${id}-button`;
 
     const component = Component({
         html: /*html*/ `
@@ -57,7 +54,7 @@ export default function Component_Button(param) {
                 fill: lightgray;
             }
         `,
-        adjacentElement: parent,
+        adjacentElement: adjacentElement,
         root: root,
         position: position || 'beforeend',
         events: [

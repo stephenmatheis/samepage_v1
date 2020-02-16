@@ -1,12 +1,19 @@
 /** (C) Stephen Matheis 2019 */
 
 export default function Store() {
+    let app;
     let appContainer;
-    let  mainContainer;
+    let mainContainer;
     let components = [];
     let events = [];
 
     return {
+        setApp(component) {
+            app = component;
+        },
+        getApp() {
+            return app;
+        },
         setAppContainer(component) {
             appContainer = component;
         },

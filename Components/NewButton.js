@@ -5,6 +5,10 @@ import Component from '../Actions/Component.js'
 import Router from '../Actions/Router.js'
 
 export default function Component_NewButton(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <span id=${id} class='new-button' >
@@ -24,7 +28,7 @@ export default function Component_NewButton(param) {
                 fill: ${app.primaryColor};
             }
         `,
-        adjacentElement: param.parent, // #TODO: remove hard coded class
+        adjacentElement: adjacentElement, // #TODO: remove hard coded class
         root: param.root,
         position: param.position || 'beforeend',
         events: [

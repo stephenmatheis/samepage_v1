@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_NewForm(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} data-list=${param.list}>
@@ -42,7 +46,7 @@ export default function Component_NewForm(param) {
                 border: solid 2px ${app.primaryColor};
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
   

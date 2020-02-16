@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_FormButton(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class="form-button ${param.type}-button">${param.value}</div>
@@ -44,7 +48,7 @@ export default function Component_FormButton(param) {
                 box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
             } */
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
             {

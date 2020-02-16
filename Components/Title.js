@@ -3,6 +3,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Title(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class='title'>
@@ -17,7 +21,7 @@ export default function Component_Title(param) {
                 margin-top: 0px;
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
             

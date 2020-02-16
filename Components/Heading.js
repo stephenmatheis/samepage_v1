@@ -4,7 +4,7 @@ import Component from '../Actions/Component.js'
 
 export default function Component_Heading(param) {
     const {
-        parent,
+        adjacentElement,
         text,
     } = param;
 
@@ -31,7 +31,7 @@ export default function Component_Heading(param) {
                 text-align: center;
             }
         `,
-        adjacentElement: parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
             

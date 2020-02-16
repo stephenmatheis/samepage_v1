@@ -24,13 +24,16 @@ async function main() {
         secondaryColor: 'whitesmoke',
         highlightColor: '#f6b73c',
         store: Store(),
-        getApp() {
-            return document.querySelector('#app');
-        },
         setComponentId() {
             return componentId++;
         }
     };
+
+    app.store.setApp({
+        get() {
+            return document.querySelector('#app');
+        }
+    })
 
     // Get current route
     const paths = location.href.split('#');

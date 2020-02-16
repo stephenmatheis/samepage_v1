@@ -5,8 +5,12 @@ import Component_AppContainer from './Components/AppContainer.js'
 import Component_MainContainer from './Components/MainContainer.js'
 
 export default function View_AppContainer(param) {
+    const {
+        route
+    } = param;
+
     const appContainer = Component_AppContainer({
-        adjacentElement: app.getApp()
+        adjacentElement: app.store.getApp()
     });
     
     app.store.setAppContainer(appContainer);
@@ -14,7 +18,7 @@ export default function View_AppContainer(param) {
 
     const sideBar = Component_SideBar({
         adjacentElement: appContainer,
-        route: param.route
+        route: route
     });
 
     sideBar.add();

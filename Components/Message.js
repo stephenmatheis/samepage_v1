@@ -4,7 +4,7 @@ import Component from '../Actions/Component.js'
 
 export default function Component_Heading(param) {
     const {
-        parent,
+        adjacentElement,
         text,
     } = param;
 
@@ -27,7 +27,7 @@ export default function Component_Heading(param) {
                 color: ${app.defaultColor};
             }
         `,
-        adjacentElement: parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
             

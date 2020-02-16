@@ -2,24 +2,19 @@
 
 /* Global Actions */
 import Component from '../Actions/Component.js'
-import Get from '../Actions/Get.js'
-
-/* Components */
-import Component_HoverForm from './HoverForm.js'
 
 export default function Component_Table(param) {
     const {
+        adjacentElement,
         heading,
         toolbar,
         checkboxes,
-        hoverFields,
         headers,
         rows,
         tables
     } = param;
     
     let viewTables = tables;
-    let hoverForm;
 
     const component = Component({
         html: /*html*/ `
@@ -171,7 +166,7 @@ export default function Component_Table(param) {
                 background: mediumseagreen url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cG9seWxpbmUgcG9pbnRzPSIyMCA2IDkgMTcgNCAxMiI+PC9wb2x5bGluZT48L3N2Zz4=) center no-repeat;
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: param.position || 'beforeend',
         events: [
             {
@@ -193,32 +188,7 @@ export default function Component_Table(param) {
                 selector: `#${id} tbody tr th`,
                 event: 'click',
                 listener: runAction
-            },
-            // {
-            //     selector: `#${id} tbody tr td`,
-            //     event: 'mouseenter',
-            //     listener: showHoverForm
-            // },
-            // {
-            //     selector: `#${id} tbody tr th`,
-            //     event: 'mouseenter',
-            //     listener: showHoverForm
-            // },
-            // {
-            //     selector: `#${id} tbody tr td`,
-            //     event: 'mouseout',
-            //     listener: removeHoverForm
-            // },
-            // {
-            //     selector: `#${id} tbody tr th`,
-            //     event: 'mouseout',
-            //     listener: removeHoverForm
-            // },
-            // {
-            //     selector: `#${app.mainContainerId}`,
-            //     event: 'scroll',
-            //     listener: removeHoverForm
-            // }
+            }
         ]
     });
 
@@ -294,7 +264,7 @@ export default function Component_Table(param) {
             const value = type ? new Date(item[firstField]).toLocaleDateString() : item[firstField];
 
             rows += /*html*/ `
-                <th data-itemid=${item.Id} ${createHoverFormDataset(firstField)}>
+                <th data-itemid=${item.Id}>
                     <div>
                         ${value}
                     </div>
@@ -308,7 +278,7 @@ export default function Component_Table(param) {
                 const value = type ? new Date(item[field]).toLocaleDateString() : item[field];
 
                 rows += /*html*/ `
-                    <td data-itemid=${item.Id} ${createHoverFormDataset(field)}>
+                    <td data-itemid=${item.Id}>
                         <div>
                             ${value}
                         </div>
@@ -326,12 +296,6 @@ export default function Component_Table(param) {
         `;
 
         return rows;
-    }
-
-    function createHoverFormDataset(field) {
-        const hover = hoverFields ? hoverFields.filter(hoverField => hoverField.column === field)[0] : undefined;
-
-        return hover ? `data-hover="${hover.column}"` : ""
     }
 
     /** On row lick, fire passed in [param.action] callback */
@@ -447,57 +411,6 @@ export default function Component_Table(param) {
 
     function removeActionData(item) {
         app.store.removeActionData(item);
-    }
-
-    /* Hover Form actions */
-    async function showHoverForm(event) {
-        if (this.dataset.hover) {
-            // Remove hover form if present
-            removeHoverForm();
-
-            // Get full item by id
-            const itemId = parseInt(this.dataset.itemid);
-            const item = param.data.filter(item => item.Id === itemId)[0];
-
-            // Define Get param
-            const hover = hoverFields.filter(hoverField => hoverField.column === this.dataset.hover)[0];
-            const field = hover.field;
-            const lookupValue = (hover.dataType === 'string') ? `'${item[field]}'` : item[field];
-            const lookupList = hover.lookupList;
-            const lookupField = hover.lookupField;
-
-            // Get lookup list item
-            const lookup = await Get({
-                list: lookupList,
-                filter: `${lookupField} eq ${lookupValue}`
-            });
-            const lookupItem = lookup[0]
-
-            // Get left position
-            const cellRect = this.getBoundingClientRect();
-            const top = cellRect.top;
-            const left = cellRect.left + 20;
-
-            console.log(event);
-
-            const form = Component_HoverForm({
-                id: `${lookupList}-${lookupField}`,
-                adjacentElement: document.body, // Hack
-                top,
-                left,
-                data: lookupItem,
-            });
-
-            hoverForm = form;
-
-            form.add();
-        }
-    }
-
-    function removeHoverForm() {
-        if (hoverForm) {
-            hoverForm.remove();
-        }
     }
 
     component.setTables = (newTables) => {

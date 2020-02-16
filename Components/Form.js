@@ -3,6 +3,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_Form(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} class='form'></div>
@@ -19,7 +23,7 @@ export default function Component_Form(param) {
                 /* overscroll-behavior: contain; /* Prevent parent scroll while cursor in card */
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: 'beforeend',
         events: [
 

@@ -4,6 +4,10 @@
 import Component from '../Actions/Component.js'
 
 export default function Component_ItemForm(param) {
+    const {
+        adjacentElement
+    } = param;
+    
     return Component({
         html: /*html*/ `
             <div id=${id} data-list=${param.list} data-itemid=${param.item.Id}>
@@ -43,7 +47,7 @@ export default function Component_ItemForm(param) {
                 border: solid 2px ${app.primaryColor};
             }
         `,
-        adjacentElement: param.parent,
+        adjacentElement: adjacentElement,
         position: param.position || 'beforeend',
         events: [
 
