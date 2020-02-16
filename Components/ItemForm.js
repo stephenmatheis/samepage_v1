@@ -44,7 +44,7 @@ export default function Component_ItemForm(options) {
             .item-form-field:active,
             .item-form-field:focus {
                 outline: none;
-                border: solid 2px ${window.ICTL.primaryColor};
+                border: solid 2px ${app.primaryColor};
             }
         `,
         parent: options.parent,

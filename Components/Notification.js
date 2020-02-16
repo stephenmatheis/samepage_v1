@@ -5,10 +5,10 @@ import Component from '../Actions/Component.js'
 
 export default function Component_Notification(options) {
     return Component({
-        id: 'ictl-notification',
+        id: 'app-notification',
         type: 'notification',
         html: /*html*/ `
-            <div id='ictl-notification' class='notification'>
+            <div id='app-notification' class='notification'>
                 ${options.text}
             </div>
         `,

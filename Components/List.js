@@ -47,15 +47,15 @@ export default function Component_List(options) {
         const fields = [
             {
                 label: 'Name',
-                field: `${window.ICTL.user.account.FirstName} ${window.ICTL.user.account.LastName}`
+                field: `${app.user.account.FirstName} ${app.user.account.LastName}`
             },
             {
                 label: 'MTF',
-                field: `${window.ICTL.user.account.MTF}`
+                field: `${app.user.account.MTF}`
             },
             {
                 label: 'Roles',
-                field: window.ICTL.user.roles.map(role => role.Title).join(', ')
+                field: app.user.roles.map(role => role.Title).join(', ')
             }
         ]
 

@@ -11,12 +11,12 @@ import View_Home from '../Views/Home/Home.js'
 
 export default function Router(route) {
     // Remove components form DOM and store
-    ICTL.store.empty();
+    app.store.empty();
 
     // Set browswer history state
     History({
         url: `${location.href.split('#')[0]}${(route) ? `#${route}` : ''}`,
-        title: `ICTL${(route) ? ` - ${route}` : ''}`
+        title: `app${(route) ? ` - ${route}` : ''}`
     });
 
     // Choose view to render

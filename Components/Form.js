@@ -16,7 +16,7 @@ export default function Component_Form(options) {
             .form {
                 padding: 30px 60px;
                 margin: 40px;
-                background: ${window.ICTL.secondaryColor};
+                background: ${app.secondaryColor};
                 border-radius: 4px;
                 box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
                 overflow: auto;

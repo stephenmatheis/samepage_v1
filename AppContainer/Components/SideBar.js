@@ -46,8 +46,8 @@ export default function Component_SideBar(options) {
                 flex-direction: column;
                 justify-content: flex-start;
                 height: 100vh;
-                /* background: ${window.ICTL.primaryColor}; */
-                background: linear-gradient(to bottom, ${ICTL.gradientColor}, ${ICTL.primaryColor});
+                /* background: ${app.primaryColor}; */
+                background: linear-gradient(to bottom, ${app.gradientColor}, ${app.primaryColor});
                 box-shadow: inset 0px 0px 6px 0 rgba(32, 33, 36, .28);
             }
 
@@ -86,20 +86,20 @@ export default function Component_SideBar(options) {
             .sidebar .nav,
             .settings {
                 padding: 20px;
-                color: ${window.ICTL.secondaryColor};
+                color: ${app.secondaryColor};
             }
 
             .sidebar .nav-selected {
-                background: ${ICTL.secondaryColor};
+                background: ${app.secondaryColor};
                 box-shadow: -12px 0px 6px 0 rgba(140, 0, 0, 1.0);
                 border-radius: 4px 0px 0px 4px;
                 transform: translateX(6px);
             }
 
             .sidebar .nav-selected .icon {
-                fill: ${ICTL.primaryColor};
-                stroke: ${ICTL.primaryColor};
-                background: ${ICTL.secondaryColor};
+                fill: ${app.primaryColor};
+                stroke: ${app.primaryColor};
+                background: ${app.secondaryColor};
             }
 
             /* Settings */
@@ -113,7 +113,6 @@ export default function Component_SideBar(options) {
         `,
         parent:options.parent,
         position: 'afterbegin',
-        permanent: true,
         events: [
             {
                 selector: '.nav',
@@ -129,7 +128,7 @@ export default function Component_SideBar(options) {
     });
 
     function createNavByRole() {
-        const roles = ICTL.user.roles.map(role => role.Title);
+        const roles = app.user.roles.map(role => role.Title);
         let html = '';
 
         if (roles.includes('Personnel')) {

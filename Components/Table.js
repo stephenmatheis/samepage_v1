@@ -78,8 +78,8 @@ export default function Component_Table(options) {
             } 
 
             .table tbody tr:hover {
-                /*background: ${window.ICTL.secondaryColor};*/
-                background: ${window.ICTL.secondaryColor};
+                /*background: ${app.secondaryColor};*/
+                background: ${app.secondaryColor};
             }
 
             .table tr:hover td:first-child {
@@ -111,7 +111,7 @@ export default function Component_Table(options) {
             }
 
             .table thead th {
-                border-bottom: solid 2px ${window.ICTL.primaryColor};
+                border-bottom: solid 2px ${app.primaryColor};
                 white-space: nowrap;
             }
 
@@ -219,7 +219,7 @@ export default function Component_Table(options) {
             //     listener: removeHoverForm
             // },
             // {
-            //     selector: `#${ICTL.mainContainerId}`,
+            //     selector: `#${app.mainContainerId}`,
             //     event: 'scroll',
             //     listener: removeHoverForm
             // }
@@ -446,11 +446,11 @@ export default function Component_Table(options) {
     }
 
     function registerActionData(item) {
-        ICTL.store.registerActionData(item);
+        app.store.registerActionData(item);
     }
 
     function removeActionData(item) {
-        ICTL.store.removeActionData(item);
+        app.store.removeActionData(item);
     }
 
     /* Hover Form actions */

@@ -24,8 +24,8 @@ export default function Component_NewButton(options) {
 
             /* Icon plus */
             .new-button .plus {
-                stroke: ${ICTL.primaryColor};
-                fill: ${ICTL.primaryColor};
+                stroke: ${app.primaryColor};
+                fill: ${app.primaryColor};
             }
         `,
         parent: options.parent, // #TODO: remove hard coded class

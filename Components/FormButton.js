@@ -23,16 +23,16 @@ export default function Component_FormButton(options) {
             }
 
             .back-button {
-                color: ${ICTL.primaryColor};
-                background: ${ICTL.secondaryColor};
-                border: solid 2px ${ICTL.primaryColor};
+                color: ${app.primaryColor};
+                background: ${app.secondaryColor};
+                border: solid 2px ${app.primaryColor};
             }
 
             .create-button,
             .update-button {
-                color: ${ICTL.secondaryColor};
-                background: ${ICTL.primaryColor};
-                border: solid 2px ${ICTL.primaryColor};
+                color: ${app.secondaryColor};
+                background: ${app.primaryColor};
+                border: solid 2px ${app.primaryColor};
             }
 
             .delete-button {
@@ -42,7 +42,7 @@ export default function Component_FormButton(options) {
             }
 
             /* .delete-button {
-                color: ${ICTL.secondaryColor};
+                color: ${app.secondaryColor};
                 background: firebrick;
                 border: solid 2px firebrick;
                 box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);

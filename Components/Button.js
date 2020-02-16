@@ -38,8 +38,8 @@ export default function Component_Button(options) {
             }
 
             .button .icon {
-                stroke: ${ICTL.primaryColor};
-                fill: ${ICTL.primaryColor};
+                stroke: ${app.primaryColor};
+                fill: ${app.primaryColor};
             }
 
             /* Colors */

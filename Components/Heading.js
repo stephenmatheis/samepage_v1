@@ -29,7 +29,7 @@ export default function Component_Heading(options) {
                 font-size: 1.2em;
                 text-align: left;
                 font-weight: 500;
-                color: ${window.ICTL.primaryColor};
+                color: ${app.primaryColor};
             }
 
             .heading-center {

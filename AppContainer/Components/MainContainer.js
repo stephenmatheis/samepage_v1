@@ -24,7 +24,6 @@ export default function Component_MainContainer(options) {
         `,
         parent: options.parent,
         position: 'beforeend',
-        permanent: true,
         events: []
     });
 }

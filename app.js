@@ -14,8 +14,8 @@ async function main() {
     // Load data
     const data = await Data();
 
-    // Define ICTL Namespace. Could make this it's own module.
-    window.ICTL = {
+    // Define app Namespace. Could make this it's own module.
+    window.app = {
         data: data,
         mainContainerId: 'main-container',
         defaultColor: 'darkslategray;',

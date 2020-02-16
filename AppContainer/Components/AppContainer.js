@@ -25,7 +25,7 @@ export default function Component_AppContainer(param) {
                 padding: 0px;
                 margin: 0px;
                 box-sizing: border-box;
-                background: ${ICTL.secondaryColor};
+                background: ${app.secondaryColor};
             }
             
             body::-webkit-scrollbar { 
@@ -42,7 +42,7 @@ export default function Component_AppContainer(param) {
             }
             
             ::-webkit-scrollbar-thumb {
-                background: ${ICTL.primaryColor};
+                background: ${app.primaryColor};
                 width: 8px;
                 height: 8px;
                 border: 3px solid transparent;
@@ -77,8 +77,8 @@ export default function Component_AppContainer(param) {
                 width: 1em;
                 height: 1em;
                 stroke-width: 0;
-                stroke: ${ICTL.secondaryColor};
-                fill: ${ICTL.secondaryColor};
+                stroke: ${app.secondaryColor};
+                fill: ${app.secondaryColor};
             }
 
             /* 
@@ -126,7 +126,6 @@ export default function Component_AppContainer(param) {
         `,
         parent: param.parent,
         position: 'afterbegin',
-        permanent: true,
         events: []
     });
 }

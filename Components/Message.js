@@ -29,7 +29,7 @@ export default function Component_Heading(options) {
                 font-size: 1.2em;
                 text-align: center;
                 font-weight: 500;
-                color: ${window.ICTL.defaultColor};
+                color: ${app.defaultColor};
             }
         `,
         parent: parent,

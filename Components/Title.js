@@ -17,7 +17,7 @@ export default function Component_Title(options) {
             .title h1{
                 font-size: 2.5em;
                 font-weight: 400;
-                color: ${window.ICTL.primaryColor};
+                color: ${app.primaryColor};
                 margin-top: 0px;
             }
         `,

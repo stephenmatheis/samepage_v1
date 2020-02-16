@@ -2,7 +2,6 @@
 
 export default function Component(options) {
     const {
-        id,
         container,
         type,
         html,
@@ -13,7 +12,7 @@ export default function Component(options) {
     } = options;
 
     const component = {
-        id,
+        id: ,
         container,
         type,
         html,
@@ -21,19 +20,18 @@ export default function Component(options) {
         parent,
         position,
         events,
-        permanent: permanent || false,
         get() {
             return document.querySelector(`#${id}`);
         },
         remove() {
-            ICTL.store.remove(component);
+            app.store.remove(component);
         },
         empty() {
             const children = document.querySelector(`#${id}`).querySelectorAll('*');
             
             [...children]
-                .filter(child => ICTL.store.get(child))
-                .map(child => ICTL.store.get(child))
+                .filter(child => app.store.get(child))
+                .map(child => app.store.get(child))
                 .forEach(component => component.remove());
         },
         add() {
@@ -51,10 +49,9 @@ export default function Component(options) {
     }
 
     function addStyle() {
-        const componentType = type ? `data-type="${type}"` : '';
         const head = document.querySelector('head');
         const html = `
-            <style type="text/css" ${componentType} data-canremove="${canRemoveStyle || 'yes'}">
+            <style type="text/css" data-component="${id}">
                 ${style}
             </style>
         `;
@@ -72,7 +69,7 @@ export default function Component(options) {
     }
 
     function register() {
-        window.ICTL.store.add(component);
+        app.store.add(component);
     }
 
     function addEventListeners(events) {

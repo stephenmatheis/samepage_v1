@@ -43,7 +43,7 @@ export default function Component_NewForm(options) {
             .new-form-field:active,
             .new-form-field:focus {
                 outline: none;
-                border: solid 2px ${window.ICTL.primaryColor};
+                border: solid 2px ${app.primaryColor};
             }
         `,
         parent: options.parent,

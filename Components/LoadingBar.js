@@ -12,7 +12,7 @@ export default function Component_LoadingBar(options) {
         html: /*html*/ `
             <div id=${id} class='loading-bar'>
                 <!-- <div class='hello-message'>
-                    <div>ICTL</div>
+                    <div>app</div>
                 </div> -->
                 <div class='loading-message'>
                     <div id='loading-message-text'>Loading ${options.list}...</div>

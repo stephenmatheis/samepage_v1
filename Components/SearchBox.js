@@ -27,8 +27,8 @@ export default function Component_SearchBox(options) {
         style: /*css*/ `
             /* Icon */
             .search-box .icon {
-                stroke: ${ICTL.primaryColor};
-                fill: ${ICTL.primaryColor};
+                stroke: ${app.primaryColor};
+                fill: ${app.primaryColor};
                 cursor: pointer;
                 font-size: 1.2em;
                 margin: 0px 10px;

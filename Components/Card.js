@@ -36,12 +36,12 @@ export default function Component_Card(options) {
                 font-weight: 500;
                 padding: 10px;
                 border-radius: 4px 4px 0px 0px;
-                background: ${window.ICTL.primaryColor};
+                background: ${app.primaryColor};
             }
             
             .card-title-name {
                 font-size: 1.5em;
-                color: ${window.ICTL.secondaryColor};
+                color: ${app.secondaryColor};
             }
         `,
         parent: options.parent,
