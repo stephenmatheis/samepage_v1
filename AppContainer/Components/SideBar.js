@@ -17,12 +17,12 @@ export default function Component_SideBar(param) {
             <div id='${id}' class="sidebar">
                 <div class="nav-container">
                     <span class="sidebar-route ${(route === "") ? "sidebar-selected" : ""} home" id="Home">
-                        <svg class="icon"><use href="#icon-home"></use></svg>
+                        <svg class="icon"><use href="../../Icons/symbol-defs.svg#icon-home"></use></svg>
                     </span>
                 </div>
                 <div class="settings-container">
                     <span class="sidebar-route ${(route === "Settings") ? "sidebar-selected" : ""} settings" id="Settings">
-                        <svg class="icon"><use href="#icon-cog"></use></svg>
+                        <svg class="icon"><use href="../../Icons/symbol-defs.svg#icon-cog"></use></svg>
                     </span>
                 </div>
             </div>
@@ -124,7 +124,7 @@ export default function Component_SideBar(param) {
 
         const newRoute = (this.id === 'Home') ? '' : this.id;
 
-        Router(newRoute);
+        // Router(newRoute);
     }
 
     function removeSelectNav() {
