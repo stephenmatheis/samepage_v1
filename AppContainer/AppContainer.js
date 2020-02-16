@@ -1,8 +1,8 @@
 /** (C) Stephen Matheis 2019 */
 
-import Component_SideBar from '../Components/SideBar.js'
-import Component_AppContainer from '../Components/AppContainer.js'
-import Component_MainContainer from '../Components/MainContainer.js'
+import Component_SideBar from './Components/SideBar.js'
+import Component_AppContainer from './Components/AppContainer.js'
+import Component_MainContainer from './Components/MainContainer.js'
 
 export default function View_AppContainer(options) {
     const appContainer = Component_AppContainer({
@@ -24,8 +24,6 @@ export default function View_AppContainer(options) {
         id: ICTL.mainContainerId,
         parent: `#${appContainer.id}`
     });
-
-    ICTL.store.setMainContainer(mainContainer);
 
     mainContainer.add();
 }

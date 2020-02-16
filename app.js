@@ -9,7 +9,9 @@ import Router from './Actions/Router.js'
 import View_AppContainer from './AppContainer/AppParts/AppContainer.js'
 
 window.onload = async () => {
+    // Load data
     const data = await Data();
+
     // Define ICTL Namespace. Could make this it's own module.
     window.ICTL = {
         data: data,

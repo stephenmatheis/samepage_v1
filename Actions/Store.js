@@ -3,7 +3,7 @@
 export default function Store() {
     let store = {
         components: [],
-        actionData: []
+        events: []
     }
 
     function get(component) {
@@ -22,7 +22,7 @@ export default function Store() {
 
     function empty() {
         store.components = [];
-        store.actionData = [];
+        store.events = [];
     }
 
     return {
